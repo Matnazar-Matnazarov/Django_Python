@@ -1,0 +1,119 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hodimlar malumotlari</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        p{
+            border: 1px solid red;
+            width: 100%;
+            padding: 2px;
+        }
+        .left{
+            border: 1px solid red;
+        }
+        .btn:hover {
+            color: black;
+            background-color: yellow;
+            border-color: yellowgreen;
+        }
+        .btn-primary {
+            --bs-btn-color: #120303;
+            --bs-btn-bg: #e9eef6;
+            --bs-btn-border-color: #f3f8fe;
+            --bs-btn-hover-color: #fff;
+            --bs-btn-hover-bg: #0b5ed7;
+            --bs-btn-hover-border-color: #0a58ca;
+            --bs-btn-focus-shadow-rgb: 49,132,253;
+            --bs-btn-active-color: #fff;
+            --bs-btn-active-bg: #0a58ca;
+            --bs-btn-active-border-color: #0a53be;
+            --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+            --bs-btn-disabled-color: #fff;
+            --bs-btn-disabled-bg: #0d6efd;
+            --bs-btn-disabled-border-color: #0d6efd;
+        }
+    </style>
+</head>
+    <body>
+{% extends 'baza.html' %}
+{% block content %}
+<div class="col-7">
+                            <form action="">
+                                <br>
+                                <div class="row">
+                                    <br>
+                                    <div class="col-4"><p>Hodim:</p></div>
+                                    <div class="col-8"><p>{{hodimlar_00.familiya}} {{hodimlar_00.ism}}</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4"><p>Ish boshlagan sana:</p></div>
+                                    <div class="col-8"><p>{{hodimlar_00.ish_boshlagan_sana}}</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4"><p>Bugungi sana:</p></div>
+                                    <div class="col-8"><p>hali aniqlanmagan</p></div>
+                                </div>
+                                <div class="row">
+                                    <label for="st" class="col-4"><p  style="width: 100%;">Ishga kelmagan kunlar soni:</p></label>
+                                    <div class="col-8">
+                                        <input type="text" placeholder="raqam kiriting" id="st"  style="width: 100%;">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4"><p>Ishlagan kunlar soni</p></div>
+                                    <div class="col-8"><p>{{hodimlar_00.ishlagan_kunlar_soni}}</p></div>
+                                </div>
+                                <div class="row">
+                                    <label for="stu" class="col-4"><p  style="width: 100%;">Kunlik ish haqi:</p></label>
+                                    <div class="col-8">
+                                        <input type="text" placeholder="" id="stu"  style="width: 100%;">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <label for="su" class="col-4"><p  style="width: 100%;">soliq :</p></label>
+                                    <div class="col-8">
+                                        <input type="text" placeholder="" id="su"  style="width: 100%;">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <label for="sui" class="col-4"><p  style="width: 100%;">belgilangan narx:</p></label>
+                                    <div class="col-8">
+                                        <input type="text" placeholder="" id="sui"  style="width: 100%;">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">
+                                        <input type="text" placeholder="karta raqami" style="width: 100%;">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">
+                                        <input type="text" placeholder="Bank tranzistor raqami" style="width: 100%;">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">
+    <!--                                    <input type="text" placeholder="Bank MFO" style="width: 100%;">-->
+                                          <label for="sui" class="col-4"><p style="width: 100%;">belgilangan narx: </p></label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4"><p>Maosh:</p></div>
+                                    <div class="col-8"><p>199 500       so'm</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">
+                                        <label for="sui" class="col-4"><p  style="width: 100%;">Pul o'tkazish</p></label>
+                                        <div class="btn btn-success">
+                                            O'tkazish
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+{% endblock content %}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    </body>
+</html>

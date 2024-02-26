@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Asosiy sahifa</title>
+</head>
+<body>
+    <header>
+            <div class="container mt-3">
+        <div class="row text-center">
+            <div class="col-3">
+                <a href="{% url 'home'%}"><div class="btn btn-primary" style="width: 100%;">
+                    Asosiy sahifasi
+                </div></a>
+            </div>
+            <div class="col-3">
+                <a href="{% url 'hodim'%}"><div class="btn btn-primary" style="width: 100%;">
+                    Hodimlar
+                </div></a>
+            </div>
+            <div class="col-3">
+                <a href="{% url 'muzqaymoq_sahifasi'%}"><div class="btn btn-primary" style="width: 100%;">
+                    Muzqaymoqlar
+                </div></a>
+            </div>
+            <div class="col-3">
+                <a href="{% url 'sahifa3'%}"><div class="btn btn-primary" style="width: 100%;">
+                    izohlar
+                </div></a>
+            </div>
+        </div>
+                </div>
+    </header>
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>
